@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson 7</title>
+    <style>
+        * {
+            font-family:cursive;
+        }
+        body {
+            background-color: rgb(144, 255, 255);
+        }
+        h1 {
+            text-align: center;
+            color: rgb(191, 131, 10);
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JAVA SCRIPT</h1>
+    <h3>----OBJECTS----</h3>
+    <p>Q.1 Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not. Note: You have to complete Check_Leap function. No need to take any input.</p>
+    <p><pre>Ans.1 var Check_Leap = (year) => 
+        {
+         if (year%100===0)
+         {
+           if (year%400===0)
+           {
+            return "Leap Year";
+           }
+           else
+           {
+             return "Non Leap Year";
+           }
+         }
+         else if (year%4===0)
+         {
+           return "Leap Year";
+         }
+         else
+         {
+           return "Non Leap Year"; 
+         }
+        };
+        </pre>
+    </p>
+    <p>Q.2 Write a program which takes a numebr N as input from the user and You need to reverse the number. Note: You have to complete Reverse_Number function. No need to take any input.</p>
+    <p><pre>Ans.2 var Reverse_Number = (N) => 
+        {
+          var L=0;
+          while(N)
+          {
+            L+=N%10;
+            N=parseInt(N/10);
+            if (N!==0)
+            {
+              L*=10;
+            }
+          }
+          return L;
+        };</pre>
+    </p>
+    <p>Q.3 You are given two strings S1 and S2, you need to check whether the string S1 is a substring of string S2 or not. Note: You have to complete Substring_Check function. No need to take any input.</p>
+    <p><pre>Ans.3 var Substring_Check = (S1, S2) => 
+        {
+          var n=0;
+          var newstr="";
+          S1+=" ";
+          for (i=0; i < S1.length; i++)
+          {
+            if (S1.charAt(i)===" ")
+            {
+              newstr=S1.slice(n,i);
+              if (newstr===S2)
+              {
+                return "YES";
+              }
+              n=i+1;
+            }
+          }
+          return "NO";
+        };</pre>
+    </p>
+    <p>Q.4 You are given a string S, and your task is to return the length of the string S. Note: You have to solve it without using length method. You have to complete findLength function. No need to take any input.</p>
+    <p><pre>Ans.4 const findLength = (S) => 
+        {
+          var i=0;
+          var count=0;
+          while (S.charAt(i))
+          {
+            count++;
+            i++;
+          }
+          return count;
+        };</pre>
+    </p>
+    <p>Q.5 You are given a string S consisting of two letters A and D,where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. You need to find out the that which player wins the maximum number of games or there is a draw between them. Note: You have to complete Game_Winner function. No need to take any input.</p>
+    <p><pre>Ans.5 var Game_Winner = (S) => 
+        {
+          var countA=0;
+          var countD=0;
+          for (i=0; i < S.length; i++)
+          {
+            if (S.charAt(i)==='A')
+            {
+              countA++;
+            }
+            else
+            {
+              countD++;
+            }
+          }
+          if (countA>countD)
+          {
+            return "Aditya";
+          }
+          else if (countD>countA)
+          {
+            return "Danish";
+          }
+          else 
+          {
+            return "Draw";
+          }
+        }</pre>
+    </p>
+    <p>Q.6 You are given two strings S and P, and your task is to concatenate them and return the concatenated string. Note: You have to complete joinStrings function. No need to take any input.</p>
+    <p><pre>Ans.6 const joinStrings = (S, P) => 
+        {
+            var final=S;
+            final+=P;
+            return final;
+        };</pre>
+    </p>
+</body>
+</html>
