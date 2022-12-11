@@ -23,80 +23,50 @@
 <body>
     <h1>JAVA SCRIPT</h1>
     <h3>----OBJECTS----</h3>
-    <p>Q.1 Write a program which takes an year N as input from the user and find out whether the given year is a Leap Year or not. Note: You have to complete Check_Leap function. No need to take any input.</p>
-    <p><pre>Ans.1 var Check_Leap = (year) => 
-        {
-         if (year%100===0)
-         {
-           if (year%400===0)
-           {
-            return "Leap Year";
-           }
-           else
-           {
-             return "Non Leap Year";
-           }
-         }
-         else if (year%4===0)
-         {
-           return "Leap Year";
-         }
-         else
-         {
-           return "Non Leap Year"; 
-         }
-        };
+    <p>Q.1 Complete the function in the editor. In which you are given an object as a parameter. You have to return "false" if there is no parameter in the object otherwise return "true".</p>
+    <p><pre>Ans.1 function Check(obj1) {
+      let count=0;
+      for (let i in obj1)
+      {
+        count++;
+      }
+      if (count===0)
+      {
+        return ("false")
+      }
+      else
+      {
+        return ("true")
+      }
+   }
         </pre>
     </p>
-    <p>Q.2 Write a program which takes a numebr N as input from the user and You need to reverse the number. Note: You have to complete Reverse_Number function. No need to take any input.</p>
-    <p><pre>Ans.2 var Reverse_Number = (N) => 
-        {
-          var L=0;
-          while(N)
-          {
-            L+=N%10;
-            N=parseInt(N/10);
-            if (N!==0)
-            {
-              L*=10;
-            }
-          }
-          return L;
-        };</pre>
+    <p>Q.2 Complete the function in the editor. In which you are given one object as a parameter, in that object, there is a data member named name. Your task is to create a method inside this object named setter, such that this method will print the value of the data member named as name.</p>
+    <p><pre>Ans.2 function Check(obj1){
+      obj1.setter=function()
+      {
+        console.log(obj1.name);
+      }
+   }</pre>
     </p>
-    <p>Q.3 You are given two strings S1 and S2, you need to check whether the string S1 is a substring of string S2 or not. Note: You have to complete Substring_Check function. No need to take any input.</p>
-    <p><pre>Ans.3 var Substring_Check = (S1, S2) => 
-        {
-          var n=0;
-          var newstr="";
-          S1+=" ";
-          for (i=0; i < S1.length; i++)
-          {
-            if (S1.charAt(i)===" ")
-            {
-              newstr=S1.slice(n,i);
-              if (newstr===S2)
-              {
-                return "YES";
-              }
-              n=i+1;
-            }
-          }
-          return "NO";
-        };</pre>
+    <p>Q.3 Complete the function in the editor. You have an object as a parameter. In which you have to delete the rollno property from the object and return the object.</p>
+    <p><pre>Ans.3 function Check(obj1) {
+      delete obj1.rollno;
+      return obj1;
+ }</pre>
     </p>
-    <p>Q.4 You are given a string S, and your task is to return the length of the string S. Note: You have to solve it without using length method. You have to complete findLength function. No need to take any input.</p>
-    <p><pre>Ans.4 const findLength = (S) => 
-        {
-          var i=0;
-          var count=0;
-          while (S.charAt(i))
-          {
-            count++;
-            i++;
-          }
-          return count;
-        };</pre>
+    <p>Q.4 Complete the function in the editor. In which you are given an object as a parameter.
+      In that object, there is one property named as salary if the salary is maximum than 5 lakh then return "Dream" otherwise  return "NotDream".</p>
+    <p><pre>Ans.4 function Check(obj1) {
+      if (obj1.salary>500000)
+      {
+        return ("Dream")
+      }
+      else
+      {
+        return ("NotDream")
+      }
+  }</pre>
     </p>
     <p>Q.5 You are given a string S consisting of two letters A and D,where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. You need to find out the that which player wins the maximum number of games or there is a draw between them. Note: You have to complete Game_Winner function. No need to take any input.</p>
     <p><pre>Ans.5 var Game_Winner = (S) => 
