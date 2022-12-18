@@ -38,7 +38,7 @@
       {
         return ("true")
       }
-   }
+    }
         </pre>
     </p>
     <p>Q.2 Complete the function in the editor. In which you are given one object as a parameter, in that object, there is a data member named name. Your task is to create a method inside this object named setter, such that this method will print the value of the data member named as name.</p>
@@ -68,43 +68,49 @@
       }
   }</pre>
     </p>
-    <p>Q.5 You are given a string S consisting of two letters A and D,where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. You need to find out the that which player wins the maximum number of games or there is a draw between them. Note: You have to complete Game_Winner function. No need to take any input.</p>
-    <p><pre>Ans.5 var Game_Winner = (S) => 
-        {
-          var countA=0;
-          var countD=0;
-          for (i=0; i < S.length; i++)
-          {
-            if (S.charAt(i)==='A')
-            {
-              countA++;
-            }
-            else
-            {
-              countD++;
-            }
-          }
-          if (countA>countD)
-          {
-            return "Aditya";
-          }
-          else if (countD>countA)
-          {
-            return "Danish";
-          }
-          else 
-          {
-            return "Draw";
-          }
-        }</pre>
+    <p>Q.5 Complete the function in the editor. In which you are given an object and a digit N as a parameter.In the object there are two variable id and houseno are defined as a data member. You have to multiply both the data members with a given digit N.</p>
+    <p><pre>Ans.5 function Check(a,obj1) {
+      obj1.id=obj1.id*a;
+      obj1.houseno=obj1.houseno*a;
+      return obj1;
+      }</pre>
     </p>
     <p>Q.6 You are given two strings S and P, and your task is to concatenate them and return the concatenated string. Note: You have to complete joinStrings function. No need to take any input.</p>
-    <p><pre>Ans.6 const joinStrings = (S, P) => 
-        {
-            var final=S;
-            final+=P;
-            return final;
-        };</pre>
+    <p><pre>Ans.6 function Check(obj1) {
+      var count=obj1.p1;
+      count+=obj1.p2;
+      count+=obj1.p3;
+      return(count);
+    }
+  </pre>
+    </p>
+    <p>Q.7 Complete the function in the editor. In which you are given an object as a parameter. That object contains two variables name and id. Your task is to compare the object name and id to the new_name and new_id given there as a parameter. Return "true" if new_name and id are same as objects name and id otherwise return "false".</p>
+    <p><pre>Ans.7 function check(obj1,a,b) {
+      if ((obj1.name===a) && (obj1.id===b))
+      {
+        return(true);
+      }
+      else 
+      {
+        return(false);
+      }
+  }
+  </pre>
+    </p>
+    <p>Q.8 Complete the function in the editor. In which you are given two objects as a parameter.In which you have to merge two objects and return a single object.</p>
+    <p><pre>Ans.8 function Check(obj1,obj2) {
+      const obj={};
+      for (let i in obj1)
+      {
+        obj[i]=obj1[i];
+      }
+      for (let i in obj2)
+      {
+        obj[i]=obj2[i];
+      }
+      return(obj);
+  }
+  </pre>
     </p>
 </body>
 </html>
